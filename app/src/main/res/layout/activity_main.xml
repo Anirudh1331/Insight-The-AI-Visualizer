@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="7"
+    tools:context=".MainActivity">
+<!--    <com.denzcoskun.imageslider.ImageSlider-->
+<!--        android:id="@+id/image_slider"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="match_parent"-->
+<!--        app:iss_period="5000"-->
+<!--        android:layout_weight="5"-->
+<!--        app:iss_delay="0"/>-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_weight="5.5"
+        android:weightSum="3">
+        <Button
+            android:id="@+id/btn1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/chair1"
+            android:textSize="20dp"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/btn2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/chair2"
+            android:textAllCaps="false"
+            android:textSize="20dp"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/btn3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/chair3"
+            android:textColor="#FFFFFF"
+            android:textAllCaps="false"
+            android:textSize="20dp"
+            android:layout_weight="1"/>
+    </LinearLayout>
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fragment"
+        android:layout_weight="1.5"
+        android:name="com.google.ar.sceneform.ux.ArFragment" />
+
+</LinearLayout>
