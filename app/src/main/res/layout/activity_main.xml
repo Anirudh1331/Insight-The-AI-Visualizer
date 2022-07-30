@@ -6,52 +6,67 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:weightSum="7"
+    android:background="#000000"
     tools:context=".MainActivity">
-<!--    <com.denzcoskun.imageslider.ImageSlider-->
-<!--        android:id="@+id/image_slider"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="match_parent"-->
-<!--        app:iss_period="5000"-->
-<!--        android:layout_weight="5"-->
-<!--        app:iss_delay="0"/>-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="100dp"
         android:orientation="horizontal"
-        android:layout_weight="5.5"
-        android:weightSum="3">
-        <Button
+        android:weightSum="4">
+        <ImageButton
             android:id="@+id/btn1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:textAllCaps="false"
             android:textColor="#FFFFFF"
-            android:background="@drawable/chair1"
             android:textSize="20dp"
+            android:scaleType="fitXY"
             android:layout_weight="1"/>
-        <Button
+        <ImageButton
             android:id="@+id/btn2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/chair2"
             android:textAllCaps="false"
             android:textSize="20dp"
+            android:scaleType="fitXY"
             android:layout_weight="1"/>
-        <Button
+        <ImageButton
             android:id="@+id/btn3"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/chair3"
             android:textColor="#FFFFFF"
             android:textAllCaps="false"
             android:textSize="20dp"
+            android:scaleType="fitXY"
+            android:layout_weight="1"/>
+        <ImageButton
+            android:id="@+id/btn4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="#FFFFFF"
+            android:textAllCaps="false"
+            android:textSize="20dp"
+            android:scaleType="fitXY"
             android:layout_weight="1"/>
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/remove_all_visualize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Clear Scene"
+        android:textSize="20dp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:layout_marginBottom="5dp"
+        android:background="#FF0000"/>
+
+
     <fragment
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/fragment"
-        android:layout_weight="1.5"
         android:name="com.google.ar.sceneform.ux.ArFragment" />
 
 </LinearLayout>

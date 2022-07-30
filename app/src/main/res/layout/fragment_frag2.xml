@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#B5E4EA"
+    android:background="@drawable/background2"
     tools:context=".Fragments.frag2">
 
     <LinearLayout
@@ -15,7 +15,7 @@
         android:weightSum="7">
         <!--         Edit text-->
         <EditText
-            android:id="@+id/search_amazon"
+            android:id="@+id/search_amazon_frag2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint=" Search Amazon.in"
@@ -24,11 +24,12 @@
             android:background="@drawable/buttoncircular"
             android:layout_weight="1"/>
         <ImageButton
-            android:id="@+id/cart_send"
+            android:id="@+id/cart_send_frag2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:src="@drawable/cart"
-            android:background="#B5E4EA"
+            android:layout_marginLeft="3dp"
+            android:background="@drawable/buttoncircular"
             android:layout_weight="6"/>
     </LinearLayout>
 
@@ -39,7 +40,7 @@
         android:layout_marginHorizontal="10dp">
         <!--         Upload Image -->
         <Button
-            android:id="@+id/upload_Image"
+            android:id="@+id/upload_Image_frag2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/buttoncircular"
@@ -73,22 +74,13 @@
                     android:layout_height="200dp"
                     android:layout_weight="1"
                     android:layout_margin="10dp"
-                    android:background="@drawable/border"
                     android:orientation="vertical">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="20dp"
-                        android:text="Sofa"
-                        android:textAlignment="center"
-                        android:textStyle="bold"
-                        android:textColor="#000000"/>
                     <ImageView
-                        android:layout_marginTop="2dp"
+                        android:layout_marginTop="4dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:scaleType="fitXY"
-                        android:src="@drawable/sofa"/>
+                        android:src="@drawable/pic1"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -96,22 +88,13 @@
                     android:layout_height="200dp"
                     android:layout_weight="1"
                     android:layout_margin="10dp"
-                    android:background="@drawable/border"
                     android:orientation="vertical">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="20dp"
-                        android:text="Chair"
-                        android:textAlignment="center"
-                        android:textStyle="bold"
-                        android:textColor="#000000"/>
                     <ImageView
-                        android:layout_marginTop="2dp"
+                        android:layout_marginTop="4dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:scaleType="fitXY"
-                        android:src="@drawable/chair"/>
+                        android:src="@drawable/try_pic"/>
                 </LinearLayout>
             </LinearLayout>
 
@@ -126,22 +109,13 @@
                     android:layout_height="200dp"
                     android:layout_weight="1"
                     android:layout_margin="10dp"
-                    android:background="@drawable/border"
                     android:orientation="vertical">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="20dp"
-                        android:text="Sofa"
-                        android:textAlignment="center"
-                        android:textStyle="bold"
-                        android:textColor="#000000"/>
                     <ImageView
-                        android:layout_marginTop="2dp"
+                        android:layout_marginTop="4dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:scaleType="fitXY"
-                        android:src="@drawable/sofa"/>
+                        android:src="@drawable/pic3"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -149,22 +123,13 @@
                     android:layout_height="200dp"
                     android:layout_weight="1"
                     android:layout_margin="10dp"
-                    android:background="@drawable/border"
                     android:orientation="vertical">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="20dp"
-                        android:text="Chair"
-                        android:textAlignment="center"
-                        android:textStyle="bold"
-                        android:textColor="#000000"/>
                     <ImageView
-                        android:layout_marginTop="2dp"
+                        android:layout_marginTop="4dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:scaleType="fitXY"
-                        android:src="@drawable/chair"/>
+                        android:src="@drawable/pic4"/>
                 </LinearLayout>
             </LinearLayout>
 
@@ -179,22 +144,13 @@
                     android:layout_height="200dp"
                     android:layout_weight="1"
                     android:layout_margin="10dp"
-                    android:background="@drawable/border"
                     android:orientation="vertical">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="20dp"
-                        android:text="Sofa"
-                        android:textAlignment="center"
-                        android:textStyle="bold"
-                        android:textColor="#000000"/>
                     <ImageView
-                        android:layout_marginTop="2dp"
+                        android:layout_marginTop="4dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:scaleType="fitXY"
-                        android:src="@drawable/sofa"/>
+                        android:src="@drawable/pic5"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -202,22 +158,13 @@
                     android:layout_height="200dp"
                     android:layout_weight="1"
                     android:layout_margin="10dp"
-                    android:background="@drawable/border"
                     android:orientation="vertical">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="20dp"
-                        android:text="Chair"
-                        android:textAlignment="center"
-                        android:textStyle="bold"
-                        android:textColor="#000000"/>
                     <ImageView
-                        android:layout_marginTop="2dp"
+                        android:layout_marginTop="4dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:scaleType="fitXY"
-                        android:src="@drawable/chair"/>
+                        android:src="@drawable/pic6"/>
                 </LinearLayout>
             </LinearLayout>
 
@@ -232,22 +179,13 @@
                     android:layout_height="200dp"
                     android:layout_weight="1"
                     android:layout_margin="10dp"
-                    android:background="@drawable/border"
                     android:orientation="vertical">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="20dp"
-                        android:text="Sofa"
-                        android:textAlignment="center"
-                        android:textStyle="bold"
-                        android:textColor="#000000"/>
                     <ImageView
-                        android:layout_marginTop="2dp"
+                        android:layout_marginTop="4dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:scaleType="fitXY"
-                        android:src="@drawable/sofa"/>
+                        android:src="@drawable/pic7"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -255,22 +193,13 @@
                     android:layout_height="200dp"
                     android:layout_weight="1"
                     android:layout_margin="10dp"
-                    android:background="@drawable/border"
                     android:orientation="vertical">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="20dp"
-                        android:text="Chair"
-                        android:textAlignment="center"
-                        android:textStyle="bold"
-                        android:textColor="#000000"/>
                     <ImageView
-                        android:layout_marginTop="2dp"
+                        android:layout_marginTop="4dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:scaleType="fitXY"
-                        android:src="@drawable/chair"/>
+                        android:src="@drawable/pic8"/>
                 </LinearLayout>
             </LinearLayout>
 

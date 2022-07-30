@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#B5E4EA"
+    android:background="@drawable/background2"
     tools:context=".Fragments.frag1">
     <LinearLayout
         android:layout_width="match_parent"
@@ -28,7 +28,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:src="@drawable/cart"
-            android:background="#B5E4EA"
+            android:layout_marginLeft="3dp"
+            android:background="@drawable/buttoncircular"
             android:layout_weight="6"/>
     </LinearLayout>
 
@@ -63,7 +64,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:fontFamily="serif"
-        android:text="Smartphones from top brands"
+        android:text="Top Items"
         android:textColor="@android:color/black"
         android:textSize="18sp" />
 
@@ -82,16 +83,20 @@
             android:orientation="horizontal">
 
             <ImageView
+                android:layout_marginRight="5dp"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:src="@drawable/chair" />
+                android:scaleType="fitXY"
+                android:src="@drawable/chair_card"/>
 
             <ImageView
+                android:layout_marginLeft="5dp"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:src="@drawable/chair1" />
+                android:src="@drawable/sofaa"
+                android:scaleType="fitXY"/>
         </LinearLayout>
 
         <LinearLayout
@@ -107,7 +112,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:fontFamily="serif"
-                android:text="Samsung"
+                android:text="Chair"
+                android:textSize="18dp"
                 android:textAlignment="center"
                 android:textColor="@android:color/black" />
 
@@ -116,7 +122,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:fontFamily="serif"
-                android:text="OnePlus"
+                android:text="Sofa"
+                android:textSize="18dp"
                 android:textAlignment="center"
                 android:textColor="@android:color/black" />
         </LinearLayout>
@@ -129,16 +136,20 @@
             android:orientation="horizontal">
 
             <ImageView
+                android:layout_marginRight="5dp"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:src="@drawable/chair2" />
+                android:scaleType="fitXY"
+                android:src="@drawable/apple" />
 
             <ImageView
+                android:layout_marginLeft="5dp"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:src="@drawable/chair3" />
+                android:scaleType="fitXY"
+                android:src="@drawable/clothing" />
         </LinearLayout>
 
         <LinearLayout
@@ -154,7 +165,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:fontFamily="serif"
-                android:text="Apple"
+                android:text="Electronics"
+                android:textSize="18dp"
                 android:textAlignment="center"
                 android:textColor="@android:color/black" />
 
@@ -163,7 +175,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:fontFamily="serif"
-                android:text="OnePlus"
+                android:text="Clothing"
+                android:textSize="18dp"
                 android:textAlignment="center"
                 android:textColor="@android:color/black" />
         </LinearLayout>
@@ -186,7 +199,8 @@
             android:fontFamily="serif"
             android:gravity="center_vertical"
             android:text="See all"
-            android:textColor="@android:color/holo_blue_dark" />
+            android:textSize="18dp"
+            android:textColor="@color/colorPrimaryDark" />
     </LinearLayout>
     </ScrollView>
 </LinearLayout>

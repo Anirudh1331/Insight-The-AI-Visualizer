@@ -8,13 +8,23 @@
         <entry key="app/src/main/res/drawable/cart.xml" value="0.2215" />
         <entry key="app/src/main/res/drawable/cartbig.xml" value="0.2215" />
         <entry key="app/src/main/res/drawable/file_upload.xml" value="0.2215" />
+        <entry key="app/src/main/res/drawable/ic_baseline_delete_24.xml" value="0.2215" />
+        <entry key="app/src/main/res/drawable/ic_baseline_info_24.xml" value="0.2215" />
+        <entry key="app/src/main/res/drawable/ic_baseline_visibility_24.xml" value="0.2215" />
+        <entry key="app/src/main/res/drawable/ic_baseline_visibility_off_24.xml" value="0.2215" />
         <entry key="app/src/main/res/drawable/send.xml" value="0.2215" />
+        <entry key="app/src/main/res/layout/activity_cart.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_home_page.xml" value="0.21920289855072464" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.16893115942028986" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.21920289855072464" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_recommeded_items.xml" value="0.21920289855072464" />
         <entry key="app/src/main/res/layout/activity_start.xml" value="0.19610507246376813" />
         <entry key="app/src/main/res/layout/buttoncircular.xml" value="0.21920289855072464" />
-        <entry key="app/src/main/res/layout/fragment_frag1.xml" value="0.21920289855072464" />
-        <entry key="app/src/main/res/layout/fragment_frag2.xml" value="0.21920289855072464" />
+        <entry key="app/src/main/res/layout/cart_card.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/cart_cards.xml" value="0.21920289855072464" />
+        <entry key="app/src/main/res/layout/fragment_frag1.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_frag2.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/recommed_cards.xml" value="0.21920289855072464" />
         <entry key="app/src/main/res/layout/viewpager_images.xml" value="0.21920289855072464" />
       </map>
     </option>

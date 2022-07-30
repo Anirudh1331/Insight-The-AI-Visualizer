@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:weightSum="7"
+    android:weightSum="8"
+    android:background="@drawable/background2"
     tools:context=".StartActivity">
     <LinearLayout
         android:layout_width="match_parent"
@@ -33,7 +34,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:layout_marginHorizontal="15dp"
-        android:layout_weight="2">
+        android:layout_weight="3">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -42,36 +43,16 @@
             android:textStyle="bold"
             android:textAlignment="center"
             android:textColor="#000000"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:textColor="#000000"
-            android:text="View your wish list"
-            android:textSize="18dp"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:textColor="#000000"
-            android:text="Find &#38; reorder past purchases"
-            android:textSize="18dp"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:textColor="#000000"
-            android:text="Track your purchases"
-            android:textSize="18dp"/>
+
         <Button
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="40dp"
             android:id="@+id/sign_in"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Already a customer? Sign in"
             android:textAllCaps="false"
             android:textSize="18dp"
-            android:backgroundTint="#D3F3CB3C"
+            android:backgroundTint="@color/design_default_color_secondary"
             android:background="@drawable/buttoncircular"/>
         <Button
             android:layout_marginTop="15dp"
@@ -81,7 +62,7 @@
             android:text="New to Amazon? Create an account"
             android:textAllCaps="false"
             android:textSize="18dp"
-            android:backgroundTint="#20A8A9AD"
+            android:backgroundTint="#B003D3DA"
             android:background="@drawable/buttoncircular"/>
         <Button
             android:layout_marginTop="15dp"
@@ -91,7 +72,35 @@
             android:text="Skip sign in"
             android:textAllCaps="false"
             android:textSize="18dp"
-            android:backgroundTint="#20A8A9AD"
+            android:backgroundTint="#9003BADA"
             android:background="@drawable/buttoncircular"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/socialicons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center">
+
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="20dp"
+            android:src="@drawable/google" />
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="20dp"
+            android:src="@drawable/fb" />
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="20dp"
+            android:src="@drawable/twitter" />
+
     </LinearLayout>
 </LinearLayout>
