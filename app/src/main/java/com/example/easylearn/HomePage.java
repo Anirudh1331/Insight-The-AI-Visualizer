@@ -38,4 +38,7 @@ public class HomePage extends FragmentActivity {
         tabLayout.setupWithViewPager(viewPager);
 
     }
+    public void myFancyMethod(View v) {
+        Toast.makeText(HomePage.this, "Please go with the Home, Furniture for the demo time", Toast.LENGTH_SHORT).show();
+    }
 }

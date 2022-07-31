@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
                             arrayList.add(displayData);
                         }
                     }catch (Exception e){
-                        Toast.makeText(getApplicationContext(), "error adding this file", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "error adding the files", Toast.LENGTH_SHORT).show();
                     }
                 }
                 hide(sz,arrayList);
@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onCancelled(DatabaseError error) {
                 // Failed to read value
-                Toast.makeText(getApplicationContext(), ""+error, Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Error fetching the data!! Please try again...", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -103,95 +103,21 @@ public class MainActivity extends AppCompatActivity {
             Picasso.get().load(arrayList.get(1).getImage_links()).into(b2);
             Picasso.get().load(arrayList.get(2).getImage_links()).into(b3);
             Picasso.get().load(arrayList.get(3).getImage_links()).into(b4);
-//            b1.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View view) {
-//                    setUpModel(arrayList.get(0).getModel_links());
-//                    Toast.makeText(MainActivity.this, "Pic 1 selected", Toast.LENGTH_SHORT).show();
-//                    setUpPlane();
-//                }
-//            });
-//            b2.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View view) {
-//                    setUpModel(arrayList.get(1).getModel_links());
-//                    setUpPlane();
-//                    Toast.makeText(MainActivity.this, "Pic 2 selected", Toast.LENGTH_SHORT).show();
-//                }
-//            });
-//            b3.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View view) {
-//                    setUpModel(arrayList.get(2).getModel_links());
-//                    setUpPlane();
-//                    Toast.makeText(MainActivity.this, "Pic 3 selected", Toast.LENGTH_SHORT).show();
-//                }
-//            });
-//            b4.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View view) {
-//                    setUpModel(arrayList.get(3).getModel_links());
-//                    setUpPlane();
-//                    Toast.makeText(MainActivity.this, "Pic 4 selected", Toast.LENGTH_SHORT).show();
-//                }
-//            });
         }
         else if(sz==3){
             b4.setVisibility(View.INVISIBLE);
             Picasso.get().load(arrayList.get(1).getImage_links()).into(b2);
             Picasso.get().load(arrayList.get(2).getImage_links()).into(b3);
-//            b1.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View view) {
-//                    setUpModel(arrayList.get(0).getModel_links());
-//                    setUpPlane();
-//                }
-//            });
-//            b2.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View view) {
-//                    setUpModel(arrayList.get(1).getModel_links());
-//                    setUpPlane();
-//                }
-//            });
-//            b3.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View view) {
-//                    setUpModel(arrayList.get(2).getModel_links());
-//                    setUpPlane();
-//                }
-//            });
         }
         else if(sz==2){
             b4.setVisibility(View.INVISIBLE);
             b3.setVisibility(View.INVISIBLE);
             Picasso.get().load(arrayList.get(1).getImage_links()).into(b2);
-//            b1.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View view) {
-//                    setUpModel(arrayList.get(0).getModel_links());
-//                    setUpPlane();
-//                }
-//            });
-//            b2.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View view) {
-//                    setUpModel(arrayList.get(1).getModel_links());
-//                    setUpPlane();
-//                }
-//            });
         }
         else if(sz==1){
             b4.setVisibility(View.INVISIBLE);
             b3.setVisibility(View.INVISIBLE);
             b2.setVisibility(View.INVISIBLE);
-//            b1.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View view) {
-//                    setUpModel(arrayList.get(0).getModel_links());
-//                    setUpPlane();
-//                }
-//            });
         }
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -267,21 +193,3 @@ public class MainActivity extends AppCompatActivity {
         node.select();
     }
 }
-
-//        ArrayList<SlideModel> images=new ArrayList<>();
-//        images.add(new SlideModel(R.drawable.chair1,null));
-//        images.add(new SlideModel(R.drawable.chair2,null));
-//        images.add(new SlideModel(R.drawable.chair3,null));
-//        imageSlider.setImageList(images, ScaleTypes.FIT);
-//
-//        setUpModel(Model_URL1);
-//        setUpPlane();
-//        imageSlider.setItemClickListener(new ItemClickListener() {
-//            @Override
-//            public void onItemSelected(int i) {
-//                String model="Model_URL"+(i+1);
-//                setUpModel(model);
-//                setUpPlane();
-//                Toast.makeText(MainActivity.this, ""+model, Toast.LENGTH_SHORT).show();
-//            }
-//        });

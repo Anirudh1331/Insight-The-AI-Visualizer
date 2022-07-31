@@ -76,6 +76,7 @@
                     android:layout_margin="10dp"
                     android:orientation="vertical">
                     <ImageView
+                        android:id="@+id/furniture"
                         android:layout_marginTop="4dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -94,6 +95,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:scaleType="fitXY"
+                        android:onClick="myFancyMethod"
                         android:src="@drawable/try_pic"/>
                 </LinearLayout>
             </LinearLayout>
@@ -115,6 +117,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:scaleType="fitXY"
+                        android:onClick="myFancyMethod"
                         android:src="@drawable/pic3"/>
                 </LinearLayout>
 
@@ -129,6 +132,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:scaleType="fitXY"
+                        android:onClick="myFancyMethod"
                         android:src="@drawable/pic4"/>
                 </LinearLayout>
             </LinearLayout>
@@ -150,6 +154,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:scaleType="fitXY"
+                        android:onClick="myFancyMethod"
                         android:src="@drawable/pic5"/>
                 </LinearLayout>
 
@@ -164,6 +169,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:scaleType="fitXY"
+                        android:onClick="myFancyMethod"
                         android:src="@drawable/pic6"/>
                 </LinearLayout>
             </LinearLayout>
@@ -185,6 +191,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:scaleType="fitXY"
+                        android:onClick="myFancyMethod"
                         android:src="@drawable/pic7"/>
                 </LinearLayout>
 
@@ -199,6 +206,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:scaleType="fitXY"
+                        android:onClick="myFancyMethod"
                         android:src="@drawable/pic8"/>
                 </LinearLayout>
             </LinearLayout>

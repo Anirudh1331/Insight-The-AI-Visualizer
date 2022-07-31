@@ -25,6 +25,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -51,6 +52,7 @@ import java.util.Map;
 public class frag2 extends Fragment {
     Button upload_image;
     EditText search_amazon;
+    ImageView imageView;
     private static final int PICK_IMAGE = 100;
     Uri imageUri;
     ImageButton cart_send;
@@ -60,6 +62,7 @@ public class frag2 extends Fragment {
         // Required empty public constructor
     }
 
+    
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -67,7 +70,14 @@ public class frag2 extends Fragment {
         View view=inflater.inflate(R.layout.fragment_frag2, container, false);
         upload_image=view.findViewById(R.id.upload_Image_frag2);
         cart_send=view.findViewById(R.id.cart_send_frag2);
+        imageView=view.findViewById(R.id.furniture);
         search_amazon=view.findViewById(R.id.search_amazon_frag2);
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                post_upload("0");
+            }
+        });
         search_amazon.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -114,7 +124,7 @@ public class frag2 extends Fragment {
                     else if(s.contains("couch") || s.contains("Couch") || s.contains("sofa") || s.contains("Sofa"))
                         post_upload("1");
                     else{
-                        Toast.makeText(getActivity(), "Please Go with Chair and Couch", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(), "Please Go with Chair, Sofa and Couch", Toast.LENGTH_SHORT).show();
                     }
                 }
             }
@@ -139,9 +149,9 @@ public class frag2 extends Fragment {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
 //                dialog.cancel();
+                checkAndRequestPermissions(getActivity());
                 Intent takePicture = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
                 startActivityForResult(takePicture, 0);
-                Toast.makeText(getActivity(), "Dialog removed", Toast.LENGTH_SHORT).show();
             }
         });
         builder.setNeutralButton("Cancel", new DialogInterface.OnClickListener() {
@@ -153,48 +163,48 @@ public class frag2 extends Fragment {
         builder.create().show();
     }
 //
-//    public static boolean checkAndRequestPermissions(final Activity context) {
-//        int WExtstorePermission = ContextCompat.checkSelfPermission(context,
-//                Manifest.permission.WRITE_EXTERNAL_STORAGE);
-//        int cameraPermission = ContextCompat.checkSelfPermission(context,
-//                Manifest.permission.CAMERA);
-//        List<String> listPermissionsNeeded = new ArrayList<>();
-//        if (cameraPermission != PackageManager.PERMISSION_GRANTED) {
-//            listPermissionsNeeded.add(Manifest.permission.CAMERA);
-//        }
-//        if (WExtstorePermission != PackageManager.PERMISSION_GRANTED) {
-//            listPermissionsNeeded
-//                    .add(Manifest.permission.WRITE_EXTERNAL_STORAGE);
-//        }
-//        if (!listPermissionsNeeded.isEmpty()) {
-//            ActivityCompat.requestPermissions(context, listPermissionsNeeded
-//                            .toArray(new String[listPermissionsNeeded.size()]),
-//                    101);
-//            return false;
-//        }
-//        return true;
-//    }
-//    // Handled permission Result
-//    @Override
-//    public void onRequestPermissionsResult(int requestCode,String[] permissions, int[] grantResults) {
-//        switch (requestCode) {
-//            case 101:
-//                if (ContextCompat.checkSelfPermission(getActivity(),
-//                        Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
-//                    Toast.makeText(getActivity(),
-//                                    "FlagUp Requires Access to Camara.", Toast.LENGTH_SHORT)
-//                            .show();
-//                } else if (ContextCompat.checkSelfPermission(getActivity(),
-//                        Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
-//                    Toast.makeText(getActivity(),
-//                            "FlagUp Requires Access to Your Storage.",
-//                            Toast.LENGTH_SHORT).show();
-//                } else {
-//                    openGallery();
-//                }
-//                break;
-//        }
-//    }
+    public static boolean checkAndRequestPermissions(final Activity context) {
+        int WExtstorePermission = ContextCompat.checkSelfPermission(context,
+                Manifest.permission.WRITE_EXTERNAL_STORAGE);
+        int cameraPermission = ContextCompat.checkSelfPermission(context,
+                Manifest.permission.CAMERA);
+        List<String> listPermissionsNeeded = new ArrayList<>();
+        if (cameraPermission != PackageManager.PERMISSION_GRANTED) {
+            listPermissionsNeeded.add(Manifest.permission.CAMERA);
+        }
+        if (WExtstorePermission != PackageManager.PERMISSION_GRANTED) {
+            listPermissionsNeeded
+                    .add(Manifest.permission.WRITE_EXTERNAL_STORAGE);
+        }
+        if (!listPermissionsNeeded.isEmpty()) {
+            ActivityCompat.requestPermissions(context, listPermissionsNeeded
+                            .toArray(new String[listPermissionsNeeded.size()]),
+                    101);
+            return false;
+        }
+        return true;
+    }
+    // Handled permission Result
+    @Override
+    public void onRequestPermissionsResult(int requestCode,String[] permissions, int[] grantResults) {
+        switch (requestCode) {
+            case 101:
+                if (ContextCompat.checkSelfPermission(getActivity(),
+                        Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+                    Toast.makeText(getActivity(),
+                                    "FlagUp Requires Access to Camara.", Toast.LENGTH_SHORT)
+                            .show();
+                } else if (ContextCompat.checkSelfPermission(getActivity(),
+                        Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+                    Toast.makeText(getActivity(),
+                            "FlagUp Requires Access to Your Storage.",
+                            Toast.LENGTH_SHORT).show();
+                } else {
+                    openGallery();
+                }
+                break;
+        }
+    }
 
 
     @Override
@@ -210,7 +220,7 @@ public class frag2 extends Fragment {
                 sImg= Base64.encodeToString(bytes,Base64.DEFAULT);
 //                search_amazon.setText("helo");
                 Log.e("check",sImg);
-                Toast.makeText(getActivity(), "Uploaded", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "Image Uploaded", Toast.LENGTH_SHORT).show();
                 upload_image.setText("Image Uploaded");
 
             }catch (IOException e){
@@ -225,7 +235,7 @@ public class frag2 extends Fragment {
             sImg= Base64.encodeToString(bytes,Base64.DEFAULT);
 //                search_amazon.setText("helo");
             Log.e("check",sImg);
-            Toast.makeText(getActivity(), "Uploaded", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), "Image Uploaded", Toast.LENGTH_SHORT).show();
             upload_image.setText("Image Uploaded");
         }
     }
@@ -242,7 +252,6 @@ public class frag2 extends Fragment {
         StringRequest stringRequest=new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                Toast.makeText(getActivity(), "" + response, Toast.LENGTH_LONG).show();
                 Log.e("response",response);
                 alert11.cancel();
                 if(response.equalsIgnoreCase("all") || response.equalsIgnoreCase("")){
@@ -267,7 +276,7 @@ public class frag2 extends Fragment {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Toast.makeText(getActivity(), ""+error, Toast.LENGTH_LONG).show();
+                Toast.makeText(getActivity(), "Error displaying recommendation!! Please try again", Toast.LENGTH_LONG).show();
                 Log.e("error",error.toString());
                 alert11.cancel();
             }

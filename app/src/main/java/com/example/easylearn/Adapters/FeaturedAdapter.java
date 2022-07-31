@@ -59,7 +59,7 @@ public class FeaturedAdapter extends RecyclerView.Adapter<FeaturedAdapter.Featur
                 SharedPreferences.Editor editor = sharedpreferences.edit();
                 editor.putStringSet("hello",adj);
                 editor.commit();
-                Toast.makeText(context, "Clicked"+i, Toast.LENGTH_SHORT).show();
+//                Toast.makeText(context, "Clicked"+i, Toast.LENGTH_SHORT).show();
                 i++;
             }
         });
