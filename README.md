@@ -2,7 +2,7 @@
 
 <<<<<<< HEAD
 ## Screenshots
-![alt text](https://github.com/Anirudh1331/Amazon-Hackathon/blob/main/my_image.jpeg?raw=true)
+![screenshot](https://github.com/Anirudh1331/Amazon-Hackathon/blob/main/my_image.jpeg?raw=true)
 
 ## How to Run?
 
