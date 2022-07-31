@@ -6,10 +6,15 @@
 
 ## How to Run?
 Step-1: Download the APK for sample use.
+
 Step-2: To run the app, go with the "skip login button" to enter the home page.
+
 Step-3: Click on the "Upload Image" button, and a dialog box will appear stating to choose one of the three options i.e., "Choose from Gallery", "Take Picture", and "Cancel". 
+
 Step-4: After uploading, search for the object you want to buy, and the recommendation model will provide you with various options suitable for that place.
+
 Step-5: Add the products to your card and click on the eye icon in the cart against each product to visualize it.
+
 Step-6: Click on the "Visualize" button to start visualizing the objects.
 
 
