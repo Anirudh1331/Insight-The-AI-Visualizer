@@ -2,7 +2,8 @@
 
 <<<<<<< HEAD
 ## Screenshots
-![My Image](my-image.jpeg)
+![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+
 ## How to Run?
 
 ## Problem Statement
