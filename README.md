@@ -2,7 +2,7 @@
 
 <<<<<<< HEAD
 ## Screenshots
-
+![My Image](my-image.jpg)
 ## How to Run?
 
 ## Problem Statement
