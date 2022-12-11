@@ -40,3 +40,8 @@ Majorly our entire solution is divided into 2 components:
 * Google AR Core for the Augmented Reality Experience
 * Detectron2 for the image cropping and segmentation
 * Object feature extraction and similarity measurement using ResNet trained with ImageNet in Tensorflow Hub
+
+### Contributors
+* Nakshatra
+* Devansh Gupta
+* Ankita Puri
